@@ -19,7 +19,7 @@ function App() {
       
       buttons.forEach(button => {
         // Add crosshair cursor on hover
-        button.style.cursor = 'crosshair';
+        (button as HTMLElement).style.cursor = 'crosshair';
         
         button.addEventListener('click', (e: Event) => {
           const mouseEvent = e as MouseEvent;
