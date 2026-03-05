@@ -1,0 +1,139 @@
+.portfolio-hero {
+  padding: 4rem 0 3rem;
+}
+
+.portfolio-card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.profile-image-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid rgba(37, 99, 235, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: border-color 220ms ease, transform 220ms ease;
+}
+
+.profile-image:hover {
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.fallback-svg {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid rgba(37, 99, 235, 0.3);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: border-color 220ms ease, transform 220ms ease;
+}
+
+.fallback-svg:hover {
+  border-color: var(--accent);
+  transform: scale(1.05);
+}
+
+.portfolio-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.02em;
+}
+
+.portfolio-tagline {
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin: 0 0 2rem;
+  font-weight: 600;
+}
+
+.portfolio-section {
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+
+.portfolio-section:last-child {
+  margin-bottom: 0;
+}
+
+.portfolio-section h2 {
+  font-size: 1.4rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.portfolio-section p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  transition: background 220ms ease, border-color 220ms ease;
+}
+
+.skills-list li:hover {
+  background: rgba(37, 99, 235, 0.12);
+  border-color: var(--accent);
+}
+
+.contact-info p {
+  margin-bottom: 0.75rem;
+}
+
+.contact-info a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 220ms ease;
+}
+
+.contact-info a:hover {
+  color: var(--accent-dark);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .portfolio-card {
+    margin: 0 1rem;
+    padding: 2rem 1.5rem;
+  }
+  .portfolio-header h1 {
+    font-size: 2rem;
+  }
+  .portfolio-tagline {
+    font-size: 1.1rem;
+  }
+  .portfolio-section {
+    text-align: center;
+  }
+}
