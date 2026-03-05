@@ -3,16 +3,22 @@
   "version": "1.0.0",
   "description": "Portfolio website with React, Node, and MySQL",
   "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "dev:client": "cd client && npm run dev",
     "dev:server": "cd server && npm run dev",
-    "build": "npm run build:client && npm run build:server",
-    "build:client": "cd client && npm run build",
-    "build:server": "cd server && npm run build",
+    "build": "npm run build:client && npm run export:client",
+    "build:full": "npm run build:client && npm run build:server",
+    "build:client": "npm --workspace client run build",
+    "build:server": "npm --workspace server run build",
+    "export:client": "rm -rf dist && cp -r client/dist dist",
     "start": "cd server && npm start",
     "init-db": "cd server && npm run init-db",
-    "install:all": "npm install && cd client && npm install && cd ../server && npm install"
+    "install:all": "npm install"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"
